@@ -1,16 +1,20 @@
+import {useState, useEffect} from 'react'
 import './App.css';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import ConvertForm from './components/ConvertForm';
 
-function App() {
+function App() { 
+
+  const handleBtn = (e) => {
+    console.log('clicked');
+  }
+
   return (
     <div className="App mx-aut vw-100 vh-100">
-      <div className="row">
-        <div className="columns-1">
-            <h2 className="text-5xl font-bold text-center my-4 py-4">Youtube Converter.</h2>
-        </div>
-      </div>
-      <ConvertForm />
- 
+      <Header title='Youtube Converter.'/>
+      <ConvertForm handleBtn={handleBtn}/>
+      <Footer text="All rights reserved."/>
     </div>
   );
 }
