@@ -6,8 +6,9 @@ import ConvertForm from './components/ConvertForm';
 
 function App() { 
 
-  const handleBtn = (e) => {
-    console.log('clicked');
+  const handleBtn = (url) => {
+      console.log('Video URL : ', url);
+      return true;
   }
 
   return (

@@ -18,11 +18,11 @@ function Index({handleBtn}) {
 
     if(errors.length === 0){
       // next()
-      console.log('Success');
-      return false;
+      handleBtn(url);
+      return true;
     }else{
       // error occured.
-      alert('Error : '+ errors.join(','));
+      console.error('Error : ', errors);
       return false;
     }
 
@@ -34,7 +34,7 @@ function Index({handleBtn}) {
   return (
     <div className="row">
         <div className="columns-1 my-5">
-            <form action="" className='mx-auto w-1/2'>
+            <form action="/convert" className='mx-auto w-1/2'>
             <div className='my-3'>
                 <label htmlFor="url" className='text-xl font-bold mr-4 d-block'>Youtube URL</label>
                 <input type="text" id="url" className='form-input w-full' value={url} placeholder='Enter youtube url here.' onChange={e => setUrl(e.target.value)} required/>
