@@ -34,14 +34,14 @@ function Index({handleBtn}) {
   return (
     <div className="row">
         <div className="columns-1 my-5">
-            <form action="/convert" className='mx-auto w-1/2'>
+            <form action="/convert" className='mx-auto w-1/2' method="post">
             <div className='my-3'>
                 <label htmlFor="url" className='text-xl font-bold mr-4 d-block'>Youtube URL</label>
-                <input type="text" id="url" className='form-input w-full' value={url} placeholder='Enter youtube url here.' onChange={e => setUrl(e.target.value)} required/>
+                <input type="text" id="url" className='form-input w-full' name="url" value={url} placeholder='Enter youtube url here.' onChange={e => setUrl(e.target.value)} required/>
             </div>
             
             <div className='my-3'>
-                <input type="submit" id="submit" value="Convert" className="border rounded bg-sky-600 text-zinc-100 py-2 px-3" onClick={e => converter(e)}/>
+                <input type="submit" id="submit" value="Convert" className="border cursor-pointer rounded-xl bg-red-600 text-zinc-100 py-2 px-3" onClick={e => converter(e)} />
             </div>
             </form>
         </div>
