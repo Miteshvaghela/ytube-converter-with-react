@@ -8,7 +8,7 @@ const http = require('http');
 
 
 app.post('/convert', (req, res) => {
-    console.log(req.body.url);
+    res.status(201).send({message : 'Hello from nodejs'})
 })
 
 
